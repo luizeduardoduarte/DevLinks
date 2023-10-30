@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br" class="">
   <head>
-    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link
+      href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet"/>/
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,8 +18,11 @@
   <body>
     <div id="container">
       <div id="profile">
-        <img src="./assets/assets/avatar.png" alt="descricao da imagem" />
-        <p>Luiz Eduardo</p>
+        <img src="./assets/assets/img_esquerdo.jpg" alt="modo Dark" />
+        <h2>Luiz Eduardo Duarte</h2>
+      </div>
+      <div id="sobre_mim">
+        <p>Dev Junior; <br> Skill: Python, SQL; <br>Learning: HTML, CSS e JavaScript;</p>  
       </div>
 
       <div id="switch" onclick="toggleMode()">
@@ -28,37 +31,43 @@
       </div>
 
       <ul>
-        <li><a href="#">Link 1, na mesma aba</a></li>
-        <li><a href="#" target="_blank">Link 2, nova aba</a></li>
+        <li>
+            <a href="https://github.com/luizeduardoduarte/Projetos" target="_blank">
+              <ion-icon name="archive"></ion-icon>Portfolio
+            </a>    
+        </li>
+        <li>
+          <p>
+            <a href="https://www.linkedin.com/in/luizeduardoduarte/" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>Linkedin
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://github.com/luizeduardoduarte" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>Github
+            </a>
+          </p>
+        </li>
+        <li>
+          <p>
+            <a href="https://t.me/luizeduardoduarte" target="_blank">
+              <ion-icon name="contacts"></ion-icon>Telegram
+            </a>
+          </p>
+        </li>
       </ul>
-      <div id="social-links">
-        <a href="https://www.github.com" target="_blank">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-
-        <a href="https://www.instagram.com" target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-
-        <a href="https://www.youtube.com" target="_blank">
-          <ion-icon name="logo-youtube"></ion-icon>
-        </a>
-
-        <a href="www.linkedin.com" target="_blank">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </div>
 
       <footer>
-        Feito com Carinho pela
-        <a href="https://www.rocketseat.com.br/" target="_blank">Rocktseat</a>
+        Acompanhe minha carreira ! <ion-icon name="heart"></ion-icon>
       </footer>
     </div>
     
-  <script  
-  src = "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"
-  ></script>
-  <script src="./script.js"></script>
+    <script src = "https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js">
+    </script>
 
+    <script src="./script.js">
+    </script>
   </body>
 </html>

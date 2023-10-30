@@ -1,12 +1,14 @@
+/* Ajuste Geral do documento*/
 * {
   margin: 0;
   padding: 0;
 }
 
+/* Variaveis */
 :root {
   --text-color: white;
   --bg-url: url(./assets/assets/bg-mobile.jpg);
-  --stroke-color: rgb(255, 255, 255, 0.5);
+  --stroke-color: rgb(255, 255, 255);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0 , 0.2);
   --highlight-color: rgba(255, 255, 255, 0.2);
@@ -16,30 +18,28 @@
 .light{
   --text-color: black;
   --bg-url: url(./assets/assets/bg-mobile-light.jpg);
-  --stroke-color: rgb(0, 0, 0, 0.5);
+  --stroke-color: rgb(0, 0, 0);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02); 
   --highlight-color: rgba(0, 0, 0, 0.1);
   --switch-bf-url: url(./assets/assets/sun.svg)
 }
 
+/* Body */
 body {
-  /*background-image: url(./assets/assets/bg-mobile.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-  */
-
-  /* background: color image repeat position/ size */
   background: var(--bg-url) no-repeat top center/ cover;
+  height: 100vh;
 }
+
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
 #container {
-  width: 360px;
+  width: auto ;
+  max-width: 588px;
+  height: auto;
   margin: 56px auto 0px;
   padding: 24px;
 }
@@ -47,11 +47,14 @@ body * {
 /* profile */
 #profile {
     text-align: center;
-    padding: 24px;
+    position: center;
+    padding: 10px;
 }
 
 #profile img {
     width: 112px;
+    border: 3px solid var(--stroke-color);
+    border-radius: 8px;
 }
 
 #profile p {
@@ -60,13 +63,19 @@ body * {
   margin-top: 8px;
 }
 
+#sobre_mim{
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  
+}
+
 /* Switch */
 #switch {
   position: relative;
   width: 64px;
 
   margin: 4px auto;
-
 }
 
 #switch button{
@@ -110,6 +119,7 @@ ul {
   padding: 24px 0;
 }
 
+/* Design das barras */
 ul li a {
   display: flex;
   align-items: center;
@@ -157,12 +167,20 @@ ul li a:hover{
   border-radius: 50%
 }
 
-#social-links a:hover{
-  background: rgb(--highlight-color);
-}
-
 footer{
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px){
+  :root {
+    --bg-url: url(assets/assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(assets/assets/bg-desktop-light.jpg);
+  }
+
 }
