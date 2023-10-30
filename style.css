@@ -5,24 +5,26 @@
 }
 
 /* Variaveis */
+  /* Mode Dark */
 :root {
   --text-color: white;
-  --bg-url: url(./assets/assets/bg-mobile.jpg);
+  --bg-url: url(./assets/bg-mobile.jpg);
   --stroke-color: rgb(255, 255, 255);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0 , 0.2);
   --highlight-color: rgba(255, 255, 255, 0.2);
-  --switch-bf-url: url(./assets/assets/moon-stars.svg)
+  --switch-bf-url: url(./assets/moon-stars.svg)
 }
 
+  /* Mode Light */
 .light{
   --text-color: black;
-  --bg-url: url(./assets/assets/bg-mobile-light.jpg);
+  --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgb(0, 0, 0);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02); 
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bf-url: url(./assets/assets/sun.svg)
+  --switch-bf-url: url(./assets/sun.svg)
 }
 
 /* Body */
@@ -30,12 +32,14 @@ body {
   background: var(--bg-url) no-repeat top center/ cover;
   height: 100vh;
 }
-
+  /* Fontes */
 body * {
   font-family: "Inter", sans-serif;
   color: var(--text-color);
 }
 
+/* profile */
+  /* Barras */
 #container {
   width: auto ;
   max-width: 588px;
@@ -51,26 +55,21 @@ body * {
     padding: 10px;
 }
 
+/* Foto do perfil */
 #profile img {
     width: 112px;
     border: 3px solid var(--stroke-color);
     border-radius: 8px;
 }
 
-#profile p {
-  font-weight: 500;
-  line-height: 24px;
-  margin-top: 8px;
-}
-
-#sobre_mim{
+/* Descricao */
+#about{
   text-align: center;
   border-radius: 8px;
   margin-bottom: 24px;
-  
 }
 
-/* Switch */
+/* Troca do Modo */
 #switch {
   position: relative;
   width: 64px;
@@ -78,6 +77,7 @@ body * {
   margin: 4px auto;
 }
 
+/* Botao para trocar para o Modo Light */
 #switch button{
   width: 32px;
   height: 32px;
@@ -90,13 +90,21 @@ body * {
   left: 0;
   z-index: 1;
   transform: translateY(-50%);
+
+  animation: slide-to-right 0.4s ;
 }
 
+/* Botao para trocar para o Modo Dark */
 .light #switch button{
-  right: 0;
-  left: initial;
+  animation: slide-to-left 0.4s forwards;
 }
 
+/* Contorno do botao de troca de Mode*/
+#switch button:hover {
+  outline: 8px solid var(--highlight-color)
+}
+
+/* Design do Botao de troca */
 #switch span{
   display: block;
   width: 64px;
@@ -147,40 +155,41 @@ ul li a:hover{
   border: 1.5px solid var(--text-color);
 }
 
-/* social links */
-#social-links{
-  display: flex;
-  justify-content: center;
-
-  padding: 24px 0;
-
-  font-size: 24px;
-}
-
-#social-links a{
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  padding: 16px;
-
-  transition: background 0.2s;
-  border-radius: 50%
-}
-
+/* Design da frase inferior */
 footer{
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
 }
 
-/* media queries */
+/* Troca de Background */
 @media (min-width: 700px){
   :root {
-    --bg-url: url(assets/assets/bg-desktop.jpg);
+    --bg-url: url(assets/bg-desktop.jpg);
   }
 
   .light {
-    --bg-url: url(assets/assets/bg-desktop-light.jpg);
+    --bg-url: url(assets/bg-desktop-light.jpg);
   }
+}
 
+/* Animacoes */
+  /* velocidade do botao para o modo Light*/
+@keyframes slide-to-left{
+  from{
+    left: 0%;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+  /* velocidade do botao para o modo Dark*/
+@keyframes slide-to-right{
+  from{
+    left: 50%;
+  }
+  to {
+    left: 0%;
+  }
 }

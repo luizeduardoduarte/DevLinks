@@ -6,10 +6,10 @@ function toggleMode() {
 
   // troca de imagens
   if (html.classList.contains("light")) {
-    img.setAttribute("src", "./assets/assets/img_direito.jpg")
+    img.setAttribute("src", "assets/img_direito.jpg")
     img.setAttribute("alt", "Descricao Light") 
   } else {
-    img.setAttribute("src", "./assets/assets/img_esquerdo.jpg")
+    img.setAttribute("src", "assets/img_esquerdo.jpg")
     img.setAttribute("alt", "Descricao Dark")
   }
 }
